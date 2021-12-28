@@ -3,7 +3,7 @@ import { getAllProducts, getProduct } from "../../lib/shopify";
 
 const Product = ({ product }) => {
   return (
-    <div>
+    <div className="min-h-screen py-12 sm:pt-20">
       <ProductContent product={product} />
     </div>
   );
