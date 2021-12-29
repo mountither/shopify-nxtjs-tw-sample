@@ -1,12 +1,9 @@
 import Head from "next/head";
+import Hero from "../components/Hero";
 import ProductList from "../components/ProductList";
 import { getProductsInCollection } from "../lib/shopify";
 
-
-export default function Home({products}) {
-
-  console.log(products)
-
+export default function Home({ products }) {
   return (
     <>
       <Head>
@@ -15,22 +12,20 @@ export default function Home({products}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div >
-      <ProductList products={products}/>
+      <div>
+        <Hero />
+        <ProductList products={products} />
       </div>
     </>
   );
 }
 
-
 export async function getStaticProps(context) {
-
   const products = await getProductsInCollection();
-
 
   return {
     props: {
-      products
+      products,
     },
-  }
+  };
 }

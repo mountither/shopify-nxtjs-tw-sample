@@ -1,18 +1,15 @@
-import React from 'react'
-import Nav from './Nav'
+import React from "react";
+import Footer from "./Footer";
+import Nav from "./Nav";
 
-const Layout = ({children}) => {
-    return (
-        <div className="flex flex-col justify-between min-h-screen">
-            <Nav/>
-            <main>
-                {children}
-            </main>
-            <footer>
-                Footer
-            </footer>
-        </div>
-    )
-}
+const Layout = ({ children }) => {
+  return (
+    <div className="flex flex-col justify-between min-h-screen">
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
